@@ -59,7 +59,7 @@ appropriate arrays within your Laravel project `config/app.php`
 
 ```php
 [
-    'Zenziva' => Kevinpurwito\LaravelZenziva\Zenziva::class,
+    'Zenziva' => Kevinpurwito\LaravelZenziva\ZenzivaFacade::class,
 ];
 ```
 
