@@ -92,6 +92,28 @@ Zenziva::sendWa('+62xxx', 'message');
 
 > Accepted file types for `sendWaFile()` are: .doc .pdf .xls .xlsx .csv .gif .jpg .mp4 .mp3
 
+### Handling the response
+
+```php
+use Kevinpurwito\LaravelZenziva\ZenzivaFacade as Zenziva;
+
+// returns the balance/credit that you have
+$response = Zenziva::sendWa('+62xxx', 'message');
+
+if ($response->getStatusCode() == 201) {
+    // if you want to check the response body, such as `messageId` you can do this:
+    $content = json_decode($response->getBody()->getContents());
+    dump($content);
+//    {
+//        "messageId":"157365",
+//        "to":"+62xxx",
+//        "status":"1",
+//        "text":"Success"
+//    }
+}
+
+```
+
 ### Testing
 
 ```bash
