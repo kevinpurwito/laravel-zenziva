@@ -19,7 +19,7 @@ composer require kevinpurwito/laravel-zenziva
 ## Configuration
 
 The `vendor:publish` command will publish a file named `kp_zenziva.php` within your laravel project config
-folder `config/kp_zenziva.php`. Edit this file with your desired table name for the table, defaults to `countries`.
+folder `config/kp_zenziva.php`.
 
 Published Config File Contents
 
